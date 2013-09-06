@@ -22,6 +22,7 @@ $ npm install ejs jade
 
  - `map` an object mapping extnames to engine names [`{}`]
  - `ext` default esxtname to use when missing [`html`]
+ - `cache` cached compiled functions [NODE_ENV != 'development']
 
 ### map
 
@@ -45,6 +46,14 @@ $ npm install ejs jade
 
   Allowing you to invoke `render('user')` instead of 
   `render('user.jade')`.
+
+### cache
+
+  When __true__ compiled template functions will be cached in-memory,
+  this prevents subsequent disk i/o, as well as the additional compilation
+  step that most template engines peform. By default this is _enabled_
+  when the __NODE_ENV__ environment variable is anything _but_ "development",
+  such as "stage" or "production".
 
 ## Example
 

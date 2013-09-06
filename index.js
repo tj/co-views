@@ -10,11 +10,18 @@ var extname = path.extname;
 var join = path.join;
 
 /**
+ * Environment.
+ */
+
+var env = process.env.NODE_ENV || 'development';
+
+/**
  * Pass views `dir` and `opts` to return
  * a render function.
  *
  *  - `map` an object mapping extnames to engine names [{}]
  *  - `ext` default extname to use when missing [html]
+ *  - `cache` cached compiled functions [NODE_ENV != 'development']
  *
  * @param {String} [dir]
  * @param {Object} [opts]
@@ -36,6 +43,10 @@ module.exports = function(dir, opts){
   // engine map
   var map = opts.map || {};
 
+  // cache compiled templates
+  var cache = opts.cache;
+  if (null == cache) cache = 'development' != env;
+
   return function(view, locals){
     locals = locals || {};
 
@@ -55,6 +66,9 @@ module.exports = function(dir, opts){
 
     // resolve
     view = join(dir, view);
+
+    // cache
+    locals.cache = cache;
 
     debug('render %s %j', view, locals);
     return render(view, locals);
