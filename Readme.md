@@ -85,6 +85,24 @@ co(function *(){
 });
 ```
 
+## App-wide views
+
+  Dependending on your choice of application structure, you may wish to
+  share these same settings between all of your application, instead of
+  constantly initializing co-views. To do this simply create a `views.js`
+  module and export the render function returned:
+
+```js
+var views = require('co-views');
+
+module.exports = views('views', {
+  map: {
+    html: 'swig',
+    md: 'hogan'
+  }
+});
+```
+
 # License
 
   MIT
