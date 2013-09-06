@@ -48,7 +48,9 @@ $ npm install ejs jade
 
 ## Example
 
-  Render several users with different template engines in parallel:
+  Render several users with different template engines in parallel. View
+  lookup is performed relative to the `./examples` directory passed,
+  and the "swig" engine is mapped to ".html" files.
 
 ```js
 var co = require('co');
