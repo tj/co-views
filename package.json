@@ -1,0 +1,26 @@
+{
+  "name": "co-view",
+  "version": "0.0.1",
+  "repository": "visionmedia/co-view",
+  "description": "Higher level thunk-based template rendering for Co and others, built on co-render",
+  "keywords": [
+    "template",
+    "render",
+    "consolidate",
+    "engine",
+    "koa"
+  ],
+  "dependencies": {
+    "debug": "*",
+    "co-render": "0.0.1"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "co": "~1.5.2",
+    "ejs": "~0.8.4",
+    "swig": "~1.0.0-rc1",
+    "jade": "~0.35.0"
+  },
+  "license": "MIT"
+}
