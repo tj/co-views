@@ -38,9 +38,9 @@ co(function *(){
 /**
  * Render each `objs` with template `name`.
  *
- * This function executes them in parallel,
+ * This function executes render() calls in parallel,
  * but retains order, since co's array support
- * assignes results properly for us:
+ * assigns results properly for us:
  *
  * https://github.com/visionmedia/co/blob/master/index.js#L148
  *
