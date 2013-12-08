@@ -1,5 +1,4 @@
-
-# co-render
+# co-views
 
   Template rendering for [co](https://github.com/visionmedia/co) using 
   [co-render](https://github.com/visionmedia/co-render). This module
