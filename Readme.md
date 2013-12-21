@@ -90,7 +90,7 @@ co(function *(){
   var html = yield [a, b, c];
   html = html.join('');
   console.log(html);
-});
+})();
 ```
 
 ## App-wide views
