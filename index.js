@@ -54,7 +54,7 @@ module.exports = function(dir, opts){
     var e = extname(view);
 
     if (!e) {
-      e = '.' + ext;;
+      e = '.' + ext;
       view += e;
     }
 
