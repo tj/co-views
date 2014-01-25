@@ -20,7 +20,7 @@ var env = process.env.NODE_ENV || 'development';
  * a render function.
  *
  *  - `map` an object mapping extnames to engine names [{}]
- *  - `ext` default extname to use when missing [html]
+ *  - `default` default extname to use when missing [html]
  *  - `cache` cached compiled functions [NODE_ENV != 'development']
  *
  * @param {String} [dir]
@@ -31,14 +31,14 @@ var env = process.env.NODE_ENV || 'development';
 
 module.exports = function(dir, opts){
   opts = opts || {};
-  
+
   debug('views %s %j', dir, opts);
-  
+
   // view directory
   dir = dir || 'views';
 
   // default extname
-  var ext = opts.ext || 'html';
+  var ext = opts.ext || opts.default || 'html';
 
   // engine map
   var map = opts.map || {};
