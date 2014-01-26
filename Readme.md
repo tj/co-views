@@ -19,8 +19,8 @@ $ npm install ejs jade
 
 ## Options
 
- - `map` an object mapping extnames to engine names [`{}`]
- - `ext` default esxtname to use when missing [`html`]
+ - `map` an object mapping extension names to engine names [`{}`]
+ - `default` default extension name to use when missing [`html`]
  - `cache` cached compiled functions [NODE_ENV != 'development']
 
 ### map
@@ -32,7 +32,7 @@ $ npm install ejs jade
 { map: { html: 'swig' } }
 ```
 
-### ext
+### default
 
   Set the default template extension when none is passed to 
   the render function. This defaults to "html". For example
@@ -40,7 +40,7 @@ $ npm install ejs jade
   this to:
 
 ```js
-{ ext: 'jade' }
+{ default: 'jade' }
 ```
 
   Allowing you to invoke `render('user')` instead of 
