@@ -43,6 +43,9 @@ module.exports = function(dir, opts){
   // engine map
   var map = opts.map || {};
 
+  // engine settings
+  var settingsMap = opts.settingsMap || {};
+
   // cache compiled templates
   var cache = opts.cache;
   if (null == cache) cache = 'development' != env;
@@ -63,6 +66,11 @@ module.exports = function(dir, opts){
 
     // map engine
     locals.engine = map[e] || e;
+
+    // map engine settings
+    if (settingsMap[locals.engine]) {
+      locals.engineSettings = settingsMap[locals.engine];
+    }
 
     // resolve
     view = join(dir, view);
