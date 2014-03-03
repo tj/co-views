@@ -1,6 +1,6 @@
 # co-views
 
-  Template rendering for [co](https://github.com/visionmedia/co) using 
+  Template rendering for [co](https://github.com/visionmedia/co) using
   [co-render](https://github.com/visionmedia/co-render). This module
   provides higher level sugar than co-render to reduce redundancy,
   for example specifying a views directory and default extension name.
@@ -22,6 +22,7 @@ $ npm install ejs jade
  - `map` an object mapping extension names to engine names [`{}`]
  - `default` default extension name to use when missing [`html`]
  - `cache` cached compiled functions [NODE_ENV != 'development']
+ - `settingsMap` an object mapping settings to engines [`{ect: {}, swig: {}}`]
 
 ### map
 
@@ -34,7 +35,7 @@ $ npm install ejs jade
 
 ### default
 
-  Set the default template extension when none is passed to 
+  Set the default template extension when none is passed to
   the render function. This defaults to "html". For example
   if you mostly use Jade, then you'd likely want to assign
   this to:
@@ -43,7 +44,7 @@ $ npm install ejs jade
 { default: 'jade' }
 ```
 
-  Allowing you to invoke `render('user')` instead of 
+  Allowing you to invoke `render('user')` instead of
   `render('user.jade')`.
 
 ### cache
@@ -53,6 +54,23 @@ $ npm install ejs jade
   step that most template engines peform. By default this is _enabled_
   when the __NODE_ENV__ environment variable is anything _but_ "development",
   such as "stage" or "production".
+
+### settingsMap
+  Here you can specify settings which will be passed to the engine at the moment of initialization. Note that you need to make sure that [consolidate](https://github.com/visionmedia/consolidate.js) supports settings for your engine. If not take a look at how it is implemented for ECT.
+
+```js
+var render = views('views', {
+  map: {
+    html: 'ect'
+  },
+  settingsMap: {
+    ect: {
+      root: 'views',
+      watch: true
+    }
+  }
+});
+```
 
 ## Example
 
