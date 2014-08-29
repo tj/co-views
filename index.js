@@ -3,6 +3,7 @@
  * Module dependencies.
  */
 
+var _ = require('lodash');
 var debug = require('debug')('co-views');
 var render = require('co-render');
 var path = require('path');
@@ -47,8 +48,11 @@ module.exports = function(dir, opts){
   var cache = opts.cache;
   if (null == cache) cache = 'development' != env;
 
+  // locals
+  opts.locals = opts.locals || {};
+
   return function(view, locals){
-    locals = locals || {};
+    locals = _.merge({}, opts.locals, locals || {});
 
     // default extname
     var e = extname(view);
