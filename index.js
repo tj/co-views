@@ -7,7 +7,7 @@ var debug = require('debug')('co-views');
 var render = require('co-render');
 var path = require('path');
 var extname = path.extname;
-var join = path.join;
+var resolve = path.resolve;
 
 /**
  * Environment.
@@ -65,7 +65,7 @@ module.exports = function(dir, opts){
     locals.engine = map[e] || e;
 
     // resolve
-    view = join(dir, view);
+    view = resolve(dir, view);
 
     // cache
     locals.cache = cache;
