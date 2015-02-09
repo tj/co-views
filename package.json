@@ -11,8 +11,9 @@
     "koa"
   ],
   "dependencies": {
+    "co-render": "0.0.1",
     "debug": "*",
-    "co-render": "0.0.1"
+    "dustjs-linkedin": "^2.5.1"
   },
   "devDependencies": {
     "mocha": "*",
