@@ -6,6 +6,7 @@
 var debug = require('debug')('co-views');
 var render = require('co-render');
 var path = require('path');
+var util = require('util');
 var extname = path.extname;
 var join = path.join;
 
@@ -69,6 +70,10 @@ module.exports = function(dir, opts){
 
     // cache
     locals.cache = cache;
+
+    // merge opts and set views for dust template engine
+    locals.views = dir;
+    util._extend(locals, opts);
 
     debug('render %s %j', view, locals);
     return render(view, locals);
