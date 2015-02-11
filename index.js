@@ -46,6 +46,10 @@ module.exports = function(dir, opts){
 
   // cache compiled templates
   var cache = opts.cache;
+
+  // helpers
+  var helpers = opts.helpers || {};
+
   if (null == cache) cache = 'development' != env;
 
   return function(view, locals){
@@ -75,6 +79,9 @@ module.exports = function(dir, opts){
 
     // cache
     locals.cache = cache;
+
+    // helpers
+    locals.helpers = helpers;
 
     debug('render %s %j', view, locals);
     return render(view, locals);
