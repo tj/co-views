@@ -11,16 +11,15 @@
     "koa"
   ],
   "dependencies": {
-    "debug": "*",
-    "co-render": "0.0.1"
+    "co-render": "0",
+    "debug": "2"
   },
   "devDependencies": {
-    "mocha": "*",
-    "should": "*",
-    "co": "~1.5.2",
-    "ejs": "~0.8.4",
-    "swig": "~1.0.0-rc1",
-    "jade": "~0.35.0"
+    "co": "4",
+    "ejs": "2",
+    "jade": "1",
+    "mocha": "2",
+    "swig": "1"
   },
   "license": "MIT"
 }
