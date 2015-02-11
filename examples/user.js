@@ -5,7 +5,7 @@
 var co = require('co');
 var views = require('..');
 
-var render = views('examples', {
+var render = views(__dirname, {
   map: { html: 'swig' }
 });
 
@@ -31,4 +31,4 @@ co(function *(){
   var html = yield [a, b, c];
   html = html.join('');
   console.log(html);
-})();
+});
