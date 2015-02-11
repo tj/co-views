@@ -1,6 +1,6 @@
 {
   "name": "co-views",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "repository": "visionmedia/co-views",
   "description": "Higher level thunk-based template rendering for Co and others, built on co-render",
   "keywords": [
@@ -9,6 +9,9 @@
     "consolidate",
     "engine",
     "koa"
+  ],
+  "files": [
+    "index.js"
   ],
   "dependencies": {
     "co-render": "0",
