@@ -12,7 +12,8 @@
   ],
   "dependencies": {
     "co-render": "0",
-    "debug": "2"
+    "debug": "2",
+    "utils-merge": "1"
   },
   "devDependencies": {
     "co": "4",

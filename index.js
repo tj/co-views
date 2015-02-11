@@ -4,6 +4,7 @@
  */
 
 var debug = require('debug')('co-views');
+var merge = require('utils-merge');
 var render = require('co-render');
 var path = require('path');
 var extname = path.extname;
@@ -49,6 +50,11 @@ module.exports = function(dir, opts){
 
   return function(view, locals){
     locals = locals || {};
+
+    // merge opts.locals
+    if (opts.locals) {
+      merge(locals, opts.locals);
+    }
 
     // default extname
     var e = extname(view);
