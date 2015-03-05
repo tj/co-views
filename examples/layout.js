@@ -6,7 +6,7 @@
 var co = require('co');
 var views = require('..');
 
-var render = views('examples', {
+var render = views(__dirname, {
   ext: 'ejs'
 });
 

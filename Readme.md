@@ -1,7 +1,7 @@
 # co-views
 
-  Template rendering for [co](https://github.com/visionmedia/co) using 
-  [co-render](https://github.com/visionmedia/co-render). This module
+  Template rendering for [co](https://github.com/tj/co) using
+  [co-render](https://github.com/tj/co-render). This module
   provides higher level sugar than co-render to reduce redundancy,
   for example specifying a views directory and default extension name.
 
@@ -34,7 +34,7 @@ $ npm install ejs jade
 
 ### default
 
-  Set the default template extension when none is passed to 
+  Set the default template extension when none is passed to
   the render function. This defaults to "html". For example
   if you mostly use Jade, then you'd likely want to assign
   this to:
@@ -43,7 +43,7 @@ $ npm install ejs jade
 { default: 'jade' }
 ```
 
-  Allowing you to invoke `render('user')` instead of 
+  Allowing you to invoke `render('user')` instead of
   `render('user.jade')`.
 
 ### cache
@@ -90,7 +90,7 @@ co(function *(){
   var html = yield [a, b, c];
   html = html.join('');
   console.log(html);
-})();
+});
 ```
 
 ## App-wide views
