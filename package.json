@@ -21,6 +21,7 @@
   "devDependencies": {
     "co": "4",
     "ejs": "2",
+    "hogan.js": "3",
     "jade": "1",
     "mocha": "2",
     "swig": "1"

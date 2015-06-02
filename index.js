@@ -44,6 +44,9 @@ module.exports = function(dir, opts){
   // engine map
   var map = opts.map || {};
 
+  // proxy partials
+  var partials = opts.partials || {};
+
   // cache compiled templates
   var cache = opts.cache;
   if (null == cache) cache = 'development' != env;
@@ -75,6 +78,8 @@ module.exports = function(dir, opts){
 
     // cache
     locals.cache = cache;
+
+    locals.partials = merge({}, partials);
 
     debug('render %s %j', view, locals);
     return render(view, locals);
