@@ -1,3 +1,15 @@
+1.0.0 / 2015-06-02
+==================
+
+ * proxy partials
+
+0.3.0 / 2015-02-11
+==================
+
+ * merge locals from opts
+ * add basic tests
+ * fix examples and readme
+ * bump deps, devDeps
 
 0.2.0 / 2014-01-25
 ==================
