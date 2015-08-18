@@ -1,6 +1,6 @@
 {
   "name": "co-views",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "repository": "tj/co-views",
   "description": "Higher level promise-based template rendering for Co and others, built on co-render",
   "keywords": [
