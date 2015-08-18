@@ -1,8 +1,8 @@
 {
   "name": "co-views",
   "version": "1.0.0",
-  "repository": "visionmedia/co-views",
-  "description": "Higher level thunk-based template rendering for Co and others, built on co-render",
+  "repository": "tj/co-views",
+  "description": "Higher level promise-based template rendering for Co and others, built on co-render",
   "keywords": [
     "template",
     "render",
@@ -14,7 +14,7 @@
     "index.js"
   ],
   "dependencies": {
-    "co-render": "0",
+    "co-render": "1",
     "debug": "2",
     "utils-merge": "1"
   },
