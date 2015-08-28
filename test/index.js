@@ -58,6 +58,7 @@ describe('views', function(){
       assert.equal(html, '<div>As far as I know, <p>tobi is a ferret</p>\n</div>\n');
     })
   })
+
   it('pass partials in render', function(){
     return co(function *(){
       var tobi = {

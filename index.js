@@ -4,7 +4,7 @@
  */
 
 var debug = require('debug')('co-views');
-var merge = require('utils-merge');
+var assign = require('object-assign');
 var render = require('co-render');
 var path = require('path');
 var extname = path.extname;
@@ -56,7 +56,7 @@ module.exports = function(dir, opts){
 
     // merge opts.locals
     if (opts.locals) {
-      merge(locals, opts.locals);
+      locals = assign(locals, opts.locals);
     }
 
     // default extname
@@ -79,7 +79,7 @@ module.exports = function(dir, opts){
     // cache
     locals.cache = cache;
 
-    locals.partials = merge(locals.partials || {}, partials || {});
+    locals.partials = assign(locals.partials || {}, partials);
 
     debug('render %s %j', view, locals);
     return render(view, locals);
