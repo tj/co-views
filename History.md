@@ -1,3 +1,9 @@
+2.1.0 / 2015-08-28
+==================
+
+ * enable partials in render
+ * replace utils-merge with object-assign
+
 2.0.0 / 2015-08-18
 ==================
 
