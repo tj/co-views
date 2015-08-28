@@ -36,7 +36,7 @@ describe('views', function(){
     })
   })
 
-  it('should pass partials', function(){
+  it('pass partials in views.options', function(){
     return co(function *(){
       var tobi = {
         name: 'tobi',
@@ -45,15 +45,37 @@ describe('views', function(){
 
       var render = views(__dirname + '/fixtures', {
         map: {
-          hjs: 'hogan'
+          html: 'hogan'
         },
         partials: {
           user: 'user'
         }
       });
 
-      var html = yield render('layout.hjs', {
+      var html = yield render('layout', {
         user: tobi
+      });
+      assert.equal(html, '<div>As far as I know, <p>tobi is a ferret</p>\n</div>\n');
+    })
+  })
+  it('pass partials in render', function(){
+    return co(function *(){
+      var tobi = {
+        name: 'tobi',
+        species: 'ferret'
+      };
+
+      var render = views(__dirname + '/fixtures', {
+        map: {
+          html: 'hogan'
+        }
+      });
+
+      var html = yield render('layout', {
+        user: tobi,
+        partials: {
+          user: 'user'
+        }
       });
       assert.equal(html, '<div>As far as I know, <p>tobi is a ferret</p>\n</div>\n');
     })

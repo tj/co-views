@@ -79,7 +79,7 @@ module.exports = function(dir, opts){
     // cache
     locals.cache = cache;
 
-    locals.partials = merge({}, partials);
+    locals.partials = merge(locals.partials || {}, partials || {});
 
     debug('render %s %j', view, locals);
     return render(view, locals);
