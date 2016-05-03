@@ -1,6 +1,6 @@
 {
   "name": "co-views",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "repository": "tj/co-views",
   "description": "Higher level promise-based template rendering for Co and others, built on co-render",
   "keywords": [
@@ -14,7 +14,7 @@
     "index.js"
   ],
   "dependencies": {
-    "co-render": "1",
+    "co-render": "^1.1.1",
     "debug": "2",
     "object-assign": "4"
   },
@@ -22,8 +22,8 @@
     "co": "4",
     "ejs": "2",
     "hogan.js": "3",
-    "jade": "1",
     "mocha": "2",
+    "pug": "^0.1.0",
     "swig": "1"
   },
   "license": "MIT"
