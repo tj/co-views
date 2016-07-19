@@ -50,7 +50,7 @@ $ npm install ejs jade
 
   When __true__ compiled template functions will be cached in-memory,
   this prevents subsequent disk i/o, as well as the additional compilation
-  step that most template engines peform. By default this is _enabled_
+  step that most template engines perform. By default this is _enabled_
   when the __NODE_ENV__ environment variable is anything _but_ "development",
   such as "stage" or "production".
 
